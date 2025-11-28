@@ -1,11 +1,156 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Привет мир</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Центр медицины высоких технологий им. Исмаилова. Махачкала.">
+    <title>Центр медицины высоких технологий им. Исмаилова</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  Привет мир!!!
+    <!-- Header с тремя версиями меню -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">ЦМВТ им. Исмаилова</a>
+                </div>
+                <div class="contacts">
+                    <div class="phone">☎️ +7 (988) 291-86-66</div>
+                    <div class="address">📍 ул. Генерала Омарова, 17</div>
+                </div>
+                <button class="btn-appointment">Записаться на прием</button>
+            </div>
+            
+            <!-- Навигация: Десктоп/Планшет/Мобильная версия -->
+            <nav class="nav">
+                <!-- Гамбургер для мобильной/планшетной версии -->
+                <button class="mobile-menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Горизонтальное меню для десктопа -->
+                <ul class="menu menu-desktop">
+                    <li><a href="#about" class="active">О клинике</a></li>
+                    <li><a href="#specialists">Специалисты</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#licenses">Лицензии</a></li>
+                    <li><a href="#gallery">Фотогалерея</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                
+                <!-- Выпадающее меню для планшета (768-1024px) -->
+                <div class="menu-tablet-dropdown">
+                    <button class="tablet-menu-toggle">Меню ▼</button>
+                    <ul class="menu menu-tablet">
+                        <li><a href="#about">О клинике</a></li>
+                        <li><a href="#specialists">Специалисты</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#licenses">Лицензии</a></li>
+                        <li><a href="#gallery">Фотогалерея</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Будьте здоровы, но если заболели — Обращайтесь к нам, мы вам обязательно поможем!</h1>
+            <p class="hero-subtitle">Добро пожаловать в нашу клинику!</p>
+            <a href="#appointment" class="btn-primary">Записаться на прием</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>О нашей клинике</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Наша клиника — это современный медицинский центр с профессиональным коллективом врачей.
+                </p>
+                <p class="about-text">
+                    У нас созданы все условия для диагностики, своевременного выявления и лечения различных заболеваний по следующим направлениям:
+                </p>
+                
+                <div class="specializations-grid">
+                    <div class="spec-item">👁️ Офтальмология</div>
+                    <div class="spec-item">🚺 Гинекология</div>
+                    <div class="spec-item">🧠 Неврология</div>
+                    <div class="spec-item">🔪 Нейрохирургия</div>
+                    <div class="spec-item">🩺 Терапия</div>
+                    <div class="spec-item">❤️ Кардиология</div>
+                    <div class="spec-item">💼 Профпатология</div>
+                </div>
+                
+                <blockquote class="footer-quote">
+                    <strong>Будьте здоровы, но если Вы заболели, обращайтесь к нам, мы Вам обязательно поможем!</strong>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director Section -->
+    <section class="director" id="director">
+        <div class="container">
+            <h2>Руководитель</h2>
+            <div class="director-card">
+                <h3>Исмаилов Муслим Исмаилович</h3>
+                <p class="director-position">Генеральный директор</p>
+                <p class="director-specialty">Врач-офтальмолог, доктор медицинских наук, профессор</p>
+                <p class="director-hours">Прием: Понедельник-Пятница с 10:00 до 13:00 без записи</p>
+                <p class="contact-mail">📧 imuslim@mail.ru</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts-section" id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contacts-grid">
+                <div class="contact-block">
+                    <h3>📞 Телефоны</h3>
+                    <p><strong>Регистратура:</strong> 8 (988) 201-70-78</p>
+                    <p><strong>МРТ:</strong> 8 (988) 291-86-66</p>
+                    <p><strong>Гинекология:</strong> 8 (988) 291-66-00</p>
+                    <p><strong>Приемная руководителя:</strong> 8 (988) 293-43-45</p>
+                </div>
+                
+                <div class="contact-block">
+                    <h3>📍 Адрес</h3>
+                    <p>367015, РД, г. Махачкала,</p>
+                    <p>ул. Генерала Омарова, д.3, корп В</p>
+                    <p><strong>Email:</strong> reg.cmvt@mail.ru</p>
+                </div>
+                
+                <div class="contact-block">
+                    <h3>🕐 Режим работы</h3>
+                    <p><strong>Понедельник-Пятница:</strong> 8:00 - 17:00</p>
+                    <p><strong>Суббота:</strong> 9:00 - 14:00</p>
+                    <p><strong>Воскресенье:</strong> выходной</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 ЦМВТ им. Исмаилова</p>
+                    <p>Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
