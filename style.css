@@ -1,7 +1,310 @@
 /* ========================================== */
-/* Центр медицины высоких технологий им. Исмаилова */
-/* Полностью адаптивный дизайн */
-/* Три версии меню: Десктоп | Планшет | Мобильная */
+/* SPECIALISTS SECTION */
+/* ========================================== */
+
+.specialists {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.specialists h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.specialist-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.specialist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.specialist-photo {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.specialist-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.specialist-card:hover .specialist-photo img {
+    transform: scale(1.05);
+}
+
+.specialist-info {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.specialist-info h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.specialist-specialty {
+    color: #0056b3;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.specialist-experience {
+    color: #6c757d;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.specialist-education {
+    color: #495057;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.specialist-description {
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.btn-book-specialist {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    margin-top: auto;
+}
+
+.btn-book-specialist:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,123,255,0.4);
+}
+
+/* ========================================== */
+/* SERVICES SECTION */
+/* ========================================== */
+
+.services {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 35px 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.service-features {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.service-features li {
+    color: #6c757d;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e9ecef;
+    font-size: 0.95rem;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.btn-book-service {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(40,167,69,0.3);
+    margin-top: auto;
+}
+
+.btn-book-service:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(40,167,69,0.4);
+}
+
+/* ========================================== */
+/* АДАПТИВНОСТЬ (Специалисты и Услуги) */
+/* ========================================== */
+
+@media (max-width: 1024px) {
+    .specialists {
+        padding: 80px 0;
+    }
+    
+    .specialists h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .specialists-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    
+    .services {
+        padding: 80px 0;
+    }
+    
+    .services h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .specialists {
+        padding: 60px 0;
+    }
+    
+    .specialists h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .specialists-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .specialist-photo {
+        height: 250px;
+    }
+    
+    .specialist-info {
+        padding: 20px;
+    }
+    
+    .specialist-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .services {
+        padding: 60px 0;
+    }
+    
+    .services h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+    }
+}
+
+/* ========================================== */
+/* ОСТАЛЬНЫЕ СТИЛИ (Header, Hero, About, Director, Contacts, Footer) */
 /* ========================================== */
 
 /* Reset */
@@ -24,10 +327,7 @@ body {
     padding: 0 20px;
 }
 
-/* ========================================== */
-/* HEADER - ВЕРСИЯ ДЛЯ ДЕСКТОПА (1025px+) */
-/* ========================================== */
-
+/* Header styles */
 .header {
     background: #fff;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -86,10 +386,7 @@ body {
     box-shadow: 0 6px 15px rgba(0,123,255,0.4);
 }
 
-/* ========================================== */
-/* ДЕСКТОПНОЕ МЕНЮ (1025px+) */
-/* ========================================== */
-
+/* Desktop menu */
 .nav {
     position: relative;
 }
@@ -121,17 +418,13 @@ body {
     border-bottom-color: #007bff;
 }
 
-/* Скрыть мобильный и планшетный элементы на десктопе */
 .mobile-menu-toggle,
 .tablet-menu-toggle,
 .menu-tablet-dropdown {
     display: none;
 }
 
-/* ========================================== */
-/* ПЛАНШЕТНАЯ ВЕРСИЯ (768px - 1024px) */
-/* ========================================== */
-
+/* Tablet menu (768-1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
     .container {
         padding: 0 15px;
@@ -146,15 +439,13 @@ body {
     }
     
     .contacts {
-        display: none; /* Скрыть контакты на планшете */
+        display: none;
     }
     
-    /* Скрыть десктопное меню */
     .menu-desktop {
         display: none;
     }
     
-    /* Показать планшетное меню */
     .menu-tablet-dropdown {
         display: block;
         position: relative;
@@ -237,16 +528,12 @@ body {
         color: #007bff;
     }
     
-    /* Скрыть гамбургер на планшете */
     .mobile-menu-toggle {
         display: none;
     }
 }
 
-/* ========================================== */
-/* МОБИЛЬНАЯ ВЕРСИЯ (до 767px) */
-/* ========================================== */
-
+/* Mobile menu (max 767px) */
 @media (max-width: 767px) {
     .container {
         padding: 0 10px;
@@ -263,7 +550,7 @@ body {
     }
     
     .contacts {
-        display: none; /* Скрыть контакты на мобильном */
+        display: none;
     }
     
     .btn-appointment {
@@ -271,17 +558,14 @@ body {
         font-size: 0.9rem;
     }
     
-    /* Скрыть десктопное меню */
     .menu-desktop {
         display: none;
     }
     
-    /* Скрыть планшетное меню */
     .menu-tablet-dropdown {
         display: none;
     }
     
-    /* Показать гамбургер */
     .mobile-menu-toggle {
         display: block;
         position: absolute;
@@ -305,7 +589,6 @@ body {
         transition: all 0.3s ease;
     }
     
-    /* Анимация гамбургера в крестик */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -318,7 +601,6 @@ body {
         transform: rotate(-45deg) translate(7px, -6px);
     }
     
-    /* Мобильное меню (выезжает слева) */
     .menu {
         display: block;
         position: fixed;
@@ -362,7 +644,6 @@ body {
         color: #007bff;
     }
     
-    /* Затемнение фона при открытом меню */
     .menu-overlay {
         display: none;
         position: fixed;
@@ -379,10 +660,7 @@ body {
     }
 }
 
-/* ========================================== */
-/* HERO SECTION */
-/* ========================================== */
-
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, #007bff 0%, #00a8cc 100%);
     color: #fff;
@@ -423,7 +701,6 @@ body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* Адаптивность Hero */
 @media (max-width: 1024px) {
     .hero {
         padding: 100px 0;
@@ -457,10 +734,7 @@ body {
     }
 }
 
-/* ========================================== */
-/* ABOUT SECTION */
-/* ========================================== */
-
+/* About Section */
 .about {
     padding: 100px 0;
     background: #fff;
@@ -488,20 +762,24 @@ body {
 
 .specializations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
     margin: 40px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .spec-item {
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: #fff;
-    padding: 25px;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(0,123,255,0.3);
     transition: transform 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .spec-item:hover {
@@ -521,7 +799,6 @@ body {
     color: #007bff;
 }
 
-/* Адаптивность About */
 @media (max-width: 1024px) {
     .about {
         padding: 80px 0;
@@ -529,11 +806,6 @@ body {
     
     .about h2 {
         font-size: 2rem;
-    }
-    
-    .specializations-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
     }
 }
 
@@ -548,12 +820,13 @@ body {
     }
     
     .specializations-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     
     .spec-item {
-        padding: 20px;
+        padding: 15px;
+        font-size: 0.85rem;
     }
     
     .footer-quote {
@@ -562,10 +835,7 @@ body {
     }
 }
 
-/* ========================================== */
-/* DIRECTOR SECTION */
-/* ========================================== */
-
+/* Director Section */
 .director {
     padding: 100px 0;
     background: #f8f9fa;
@@ -620,7 +890,6 @@ body {
     font-weight: 600;
 }
 
-/* Адаптивность Director */
 @media (max-width: 1024px) {
     .director {
         padding: 80px 0;
@@ -649,10 +918,7 @@ body {
     }
 }
 
-/* ========================================== */
-/* CONTACTS SECTION */
-/* ========================================== */
-
+/* Contacts Section */
 .contacts-section {
     padding: 100px 0;
     background: #fff;
@@ -697,7 +963,6 @@ body {
     color: #495057;
 }
 
-/* Адаптивность Contacts */
 @media (max-width: 1024px) {
     .contacts-section {
         padding: 80px 0;
@@ -723,10 +988,7 @@ body {
     }
 }
 
-/* ========================================== */
-/* FOOTER */
-/* ========================================== */
-
+/* Footer */
 .footer {
     background: #343a40;
     color: #fff;
@@ -742,7 +1004,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Адаптивность Footer */
 @media (max-width: 767px) {
     .footer {
         padding: 30px 0;

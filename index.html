@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header с тремя версиями меню -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-top">
@@ -22,16 +22,13 @@
                 <button class="btn-appointment">Записаться на прием</button>
             </div>
             
-            <!-- Навигация: Десктоп/Планшет/Мобильная версия -->
             <nav class="nav">
-                <!-- Гамбургер для мобильной/планшетной версии -->
                 <button class="mobile-menu-toggle" aria-label="Открыть меню">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 
-                <!-- Горизонтальное меню для десктопа -->
                 <ul class="menu menu-desktop">
                     <li><a href="#about" class="active">О клинике</a></li>
                     <li><a href="#specialists">Специалисты</a></li>
@@ -41,7 +38,6 @@
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
                 
-                <!-- Выпадающее меню для планшета (768-1024px) -->
                 <div class="menu-tablet-dropdown">
                     <button class="tablet-menu-toggle">Меню ▼</button>
                     <ul class="menu menu-tablet">
@@ -75,22 +71,173 @@
                     Наша клиника — это современный медицинский центр с профессиональным коллективом врачей.
                 </p>
                 <p class="about-text">
-                    У нас созданы все условия для диагностики, своевременного выявления и лечения различных заболеваний по следующим направлениям:
+                    У нас созданы все условия для диагностики, своевременного выявления и лечения различных заболеваний.
                 </p>
                 
                 <div class="specializations-grid">
                     <div class="spec-item">👁️ Офтальмология</div>
-                    <div class="spec-item">🚺 Гинекология</div>
                     <div class="spec-item">🧠 Неврология</div>
-                    <div class="spec-item">🔪 Нейрохирургия</div>
-                    <div class="spec-item">🩺 Терапия</div>
                     <div class="spec-item">❤️ Кардиология</div>
-                    <div class="spec-item">💼 Профпатология</div>
+                    <div class="spec-item">🧘 Психология</div>
+                    <div class="spec-item">🦴 Травматология</div>
                 </div>
                 
                 <blockquote class="footer-quote">
                     <strong>Будьте здоровы, но если Вы заболели, обращайтесь к нам, мы Вам обязательно поможем!</strong>
                 </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialists Section -->
+    <section class="specialists" id="specialists">
+        <div class="container">
+            <h2>Наши специалисты</h2>
+            <div class="specialists-grid">
+                
+                <!-- Офтальмолог -->
+                <div class="specialist-card">
+                    <div class="specialist-photo">
+                        <img src="images/doctor-ophthalmology.jpg" alt="Офтальмолог" onerror="this.src='https://via.placeholder.com/300x400/007bff/ffffff?text=Офтальмолог'">
+                    </div>
+                    <div class="specialist-info">
+                        <h3>Доктор Петрова Анна Сергеевна</h3>
+                        <p class="specialist-specialty">Офтальмолог</p>
+                        <p class="specialist-experience">Стаж работы: 18 лет</p>
+                        <p class="specialist-education">Образование: РНИМУ им. Н.И. Пирогова</p>
+                        <p class="specialist-description">
+                            Специалист по диагностике и лечению заболеваний глаз, подбору очков и контактных линз. Выполняет лазерную коррекцию зрения.
+                        </p>
+                        <button class="btn-book-specialist" data-doctor="Петрова Анна Сергеевна">Записаться к врачу</button>
+                    </div>
+                </div>
+
+                <!-- Невролог -->
+                <div class="specialist-card">
+                    <div class="specialist-photo">
+                        <img src="images/doctor-neurology.jpg" alt="Невролог" onerror="this.src='https://via.placeholder.com/300x400/007bff/ffffff?text=Невролог'">
+                    </div>
+                    <div class="specialist-info">
+                        <h3>Доктор Иванов Дмитрий Владимирович</h3>
+                        <p class="specialist-specialty">Невролог</p>
+                        <p class="specialist-experience">Стаж работы: 15 лет</p>
+                        <p class="specialist-education">Образование: ДГМА, неврология</p>
+                        <p class="specialist-description">
+                            Лечение заболеваний нервной системы, головных болей, невралгий, остеохондроза. Проводит электронейромиографию.
+                        </p>
+                        <button class="btn-book-specialist" data-doctor="Иванов Дмитрий Владимирович">Записаться к врачу</button>
+                    </div>
+                </div>
+
+                <!-- Кардиолог -->
+                <div class="specialist-card">
+                    <div class="specialist-photo">
+                        <img src="images/doctor-cardiology.jpg" alt="Кардиолог" onerror="this.src='https://via.placeholder.com/300x400/007bff/ffffff?text=Кардиолог'">
+                    </div>
+                    <div class="specialist-info">
+                        <h3>Доктор Сидорова Елена Николаевна</h3>
+                        <p class="specialist-specialty">Кардиолог</p>
+                        <p class="specialist-experience">Стаж работы: 22 года</p>
+                        <p class="specialist-education">Образование: Первый МГМУ им. Сеченова</p>
+                        <p class="specialist-description">
+                            Диагностика и лечение заболеваний сердечно-сосудистой системы, гипертонии, аритмии. ЭКГ, Холтер, суточное мониторирование.
+                        </p>
+                        <button class="btn-book-specialist" data-doctor="Сидорова Елена Николаевна">Записаться к врачу</button>
+                    </div>
+                </div>
+
+                <!-- Психолог -->
+                <div class="specialist-card">
+                    <div class="specialist-photo">
+                        <img src="images/doctor-psychology.jpg" alt="Психолог" onerror="this.src='https://via.placeholder.com/300x400/007bff/ffffff?text=Психолог'">
+                    </div>
+                    <div class="specialist-info">
+                        <h3>Доктор Козлова Мария Александровна</h3>
+                        <p class="specialist-specialty">Психолог</p>
+                        <p class="specialist-experience">Стаж работы: 10 лет</p>
+                        <p class="specialist-education">Образование: МГУ им. Ломоносова, психология</p>
+                        <p class="specialist-description">
+                            Индивидуальное и семейное консультирование, помощь в преодолении стресса, тревоги, депрессии. Подростковая психология.
+                        </p>
+                        <button class="btn-book-specialist" data-doctor="Козлова Мария Александровна">Записаться к врачу</button>
+                    </div>
+                </div>
+
+                <!-- Травматолог -->
+                <div class="specialist-card">
+                    <div class="specialist-photo">
+                        <img src="images/doctor-traumatology.jpg" alt="Травматолог" onerror="this.src='https://via.placeholder.com/300x400/007bff/ffffff?text=Травматолог'">
+                    </div>
+                    <div class="specialist-info">
+                        <h3>Доктор Волков Алексей Петрович</h3>
+                        <p class="specialist-specialty">Травматолог</p>
+                        <p class="specialist-experience">Стаж работы: 16 лет</p>
+                        <p class="specialist-education">Образование: РНИМУ им. Н.И. Пирогова</p>
+                        <p class="specialist-description">
+                            Диагностика и лечение травм опорно-двигательного аппарата, переломов, вывихов. Гипсование, перевязки, консультации.
+                        </p>
+                        <button class="btn-book-specialist" data-doctor="Волков Алексей Петрович">Записаться к врачу</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="service-icon">👨‍⚕️</div>
+                    <h3>Прием специалистов</h3>
+                    <p>Консультация ведущих специалистов клиники. Первичный и повторный прием, составление плана лечения, выдача рецептов.</p>
+                    <ul class="service-features">
+                        <li>Первичная консультация — 1500₽</li>
+                        <li>Повторный прием — 1000₽</li>
+                        <li>Детский прием — 1200₽</li>
+                    </ul>
+                    <button class="btn-book-service" data-service="Прием специалистов">Записаться</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Диагностические процедуры</h3>
+                    <p>Современное оборудование для точной диагностики: МРТ, УЗИ, ЭКГ, лабораторные исследования, функциональные пробы.</p>
+                    <ul class="service-features">
+                        <li>МРТ одного отдела — 3500₽</li>
+                        <li>УЗИ внутренних органов — 1800₽</li>
+                        <li>ЭКГ + расшифровка — 800₽</li>
+                    </ul>
+                    <button class="btn-book-service" data-service="Диагностические процедуры">Записаться</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💆</div>
+                    <h3>Лечебный массаж</h3>
+                    <p>Профессиональный массаж для лечения и профилактики заболеваний опорно-двигательного аппарата, нервной системы.</p>
+                    <ul class="service-features">
+                        <li>Общий массаж (60 мин) — 2000₽</li>
+                        <li>Массаж спины (30 мин) — 1200₽</li>
+                        <li>Детский массаж — 1500₽</li>
+                    </ul>
+                    <button class="btn-book-service" data-service="Лечебный массаж">Записаться</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Физиотерапевтические процедуры</h3>
+                    <p>Физиотерапия: электрофорез, магнитотерапия, ультразвук, лазеротерапия, парафиновые аппликации.</p>
+                    <ul class="service-features">
+                        <li>Электрофорез — 600₽</li>
+                        <li>Магнитотерапия — 500₽</li>
+                        <li>Лазеротерапия — 700₽</li>
+                    </ul>
+                    <button class="btn-book-service" data-service="Физиотерапевтические процедуры">Записаться</button>
+                </div>
+
             </div>
         </div>
     </section>
