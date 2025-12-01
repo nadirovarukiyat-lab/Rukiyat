@@ -1,37 +1,35 @@
 // ==========================================
 // Центр медицины высоких технологий им. Исмаилова
-// Полная функциональность для всех версий меню
+// Функциональность для всех версий меню
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== 1. МОБИЛЬНОЕ МЕНЮ (Гамбургер) =====
-    // Только для экранов до 767px
+    // ===== МОБИЛЬНОЕ МЕНЮ (Гамбургер) =====
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.menu');
     
-    // Создаем оверлей (затемнение фона) для мобильного меню
+    // Создаем оверлей для мобильного меню
     const overlay = document.createElement('div');
     overlay.className = 'menu-overlay';
     document.body.appendChild(overlay);
     
-    // Обработчик клика на гамбургер
     mobileMenuToggle.addEventListener('click', function() {
         const isActive = mobileMenu.classList.contains('active');
         
-        // Переключаем состояние меню и гамбургера
+        // Переключаем состояние
         mobileMenu.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
         overlay.classList.toggle('active');
         
-        // Блокируем/разблокируем прокрутку body
+        // Блокируем прокрутку body
         document.body.style.overflow = isActive ? '' : 'hidden';
     });
     
     // Закрытие меню по клику на оверлей
     overlay.addEventListener('click', closeMobileMenu);
     
-    // Закрытие меню при клике на любую ссылку
+    // Закрытие меню при клике на ссылку
     const mobileLinks = document.querySelectorAll('.menu a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
@@ -44,22 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     }
     
-    // ===== 2. ПЛАНШЕТНОЕ МЕНЮ (Выпадающий список) =====
-    // Только для экранов 768px - 1024px
+    // ===== ПЛАНШЕТНОЕ МЕНЮ (Выпадающий список) =====
     const tabletMenuToggle = document.querySelector('.tablet-menu-toggle');
     const tabletMenu = document.querySelector('.menu-tablet');
     
     if (tabletMenuToggle) {
-        tabletMenuToggle.addEventListener('click', function(e) {
-            e.stopPropagation(); // Предотвращаем всплытие
-            
+        tabletMenuToggle.addEventListener('click', function() {
             const isActive = tabletMenu.classList.contains('active');
             
             // Переключаем состояние
             tabletMenu.classList.toggle('active');
             tabletMenuToggle.classList.toggle('active');
             
-            // Меняем текст стрелки
+            // Меняем текст кнопки
             tabletMenuToggle.textContent = isActive ? 'Меню ▼' : 'Меню ▲';
         });
         
@@ -83,8 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== 3. ПЛАВНАЯ ПРОКРУТКА =====
-    // Для всех внутренних якорных ссылок
+    // ===== ПЛАВНАЯ ПРОКРУТКО =====
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -94,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Учитываем высоту header
                 const headerOffset = 100;
                 const elementPosition = targetElement.offsetTop;
                 const offsetPosition = elementPosition - headerOffset;
@@ -107,8 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== 4. АКТИВНАЯ ССЫЛКА В МЕНЮ =====
-    // Подсвечивает текущий раздел при скролле
+    // ===== АКТИВНАЯ ССЫЛКА В МЕНЮ =====
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.menu-desktop a, .menu-tablet a, .menu a');
     
@@ -134,10 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', setActiveLink);
-    setActiveLink();
+    setActiveLink(); // Вызов при загрузке
     
-    // ===== 5. КНОПКИ ЗАПИСИ НА ПРИЕМ =====
-    // Временный алерт (заменить на реальную форму)
+    // ===== КНОПКА ЗАПИСИ НА ПРИЕМ =====
     const appointmentButtons = document.querySelectorAll('.btn-appointment, .btn-primary');
     appointmentButtons.forEach(button => {
         button.addEventListener('click', function(e) {
@@ -146,4 +137,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== 6. АНИМАЦИИ ПРИ
+    // ===== АНИМАЦИЯ ПРИ СКРОЛЛЕ =====
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Наблюдение за секциями
+    [hero, about, director, contactsSection].forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+});
