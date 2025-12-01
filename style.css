@@ -1,10 +1,10 @@
 /* ========================================== */
-/* SPECIALISTS SECTION */
+/* БЛОК СПЕЦИАЛИСТОВ (медицинский стиль) */
 /* ========================================== */
 
 .specialists {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: #f8f9fa; /* Светло-серый фон */
 }
 
 .specialists h2 {
@@ -23,38 +23,50 @@
     margin: 0 auto;
 }
 
+/* Карточка врача — строгая, с фото */
 .specialist-card {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     height: 100%;
+    border: 1px solid #e9ecef;
 }
 
 .specialist-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.2);
 }
 
 .specialist-photo {
     width: 100%;
     height: 300px;
     overflow: hidden;
-    flex-shrink: 0;
+    position: relative;
+}
+
+.specialist-photo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
 }
 
 .specialist-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .specialist-card:hover .specialist-photo img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .specialist-info {
@@ -69,31 +81,37 @@
     color: #007bff;
     margin-bottom: 10px;
     font-weight: 700;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
 }
 
 .specialist-specialty {
     color: #0056b3;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 8px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .specialist-experience {
     color: #6c757d;
     margin-bottom: 8px;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .specialist-education {
     color: #495057;
     margin-bottom: 15px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dee2e6;
 }
 
 .specialist-description {
     color: #495057;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 25px;
     font-size: 0.95rem;
     flex-grow: 1;
@@ -110,22 +128,37 @@
     font-weight: 600;
     width: 100%;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
     margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-book-specialist:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,123,255,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    background: linear-gradient(135deg, #0056b3, #004085);
 }
 
 /* ========================================== */
-/* SERVICES SECTION */
+/* БЛОК УСЛУГ (яркий, современный стиль) */
 /* ========================================== */
 
 .services {
     padding: 100px 0;
-    background: #fff;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); /* Градиентный фон */
+    position: relative;
+    overflow: hidden;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(90deg, #007bff, #00a8cc, #28a745, #ffc107, #dc3545);
 }
 
 .services h2 {
@@ -134,6 +167,7 @@
     margin-bottom: 60px;
     color: #007bff;
     font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .services-grid {
@@ -142,85 +176,161 @@
     gap: 35px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
+/* Карточка услуги — яркая, с иконкой */
 .service-card {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 35px 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
     display: flex;
     flex-direction: column;
     height: 100%;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #00a8cc);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.25);
+    border-color: #007bff;
 }
 
 .service-icon {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 4.5rem;
+    margin-bottom: 25px;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
 }
 
 .service-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #007bff;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.service-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #00a8cc);
+    border-radius: 2px;
 }
 
 .service-card p {
     color: #495057;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
     flex-grow: 1;
+    font-size: 1rem;
 }
 
 .service-features {
     list-style: none;
-    margin: 20px 0;
+    margin: 25px 0;
     padding: 0;
     text-align: left;
+    background: rgba(0, 123, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .service-features li {
     color: #6c757d;
-    padding: 8px 0;
-    border-bottom: 1px dashed #e9ecef;
+    padding: 10px 0;
+    border-bottom: 1px dashed #dee2e6;
     font-size: 0.95rem;
+    display: flex;
+    align-items: center;
 }
 
 .service-features li:last-child {
     border-bottom: none;
 }
 
+.service-features li::before {
+    content: '✓';
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
 .btn-book-service {
     background: linear-gradient(135deg, #28a745, #218838);
     color: #fff;
     border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 14px 25px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     width: 100%;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(40,167,69,0.3);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
     margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-book-service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+
+.btn-book-service:hover::before {
+    left: 100%;
 }
 
 .btn-book-service:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(40,167,69,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #218838, #1e7e34);
 }
 
 /* ========================================== */
-/* АДАПТИВНОСТЬ (Специалисты и Услуги) */
+/* АДАПТИВНОСТЬ */
 /* ========================================== */
 
 @media (max-width: 1024px) {
@@ -295,19 +405,23 @@
     }
     
     .service-card {
-        padding: 25px 20px;
+        padding: 30px 20px;
     }
     
     .service-icon {
-        font-size: 3rem;
+        font-size: 3.5rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.4rem;
     }
 }
 
 /* ========================================== */
-/* ОСТАЛЬНЫЕ СТИЛИ (Header, Hero, About, Director, Contacts, Footer) */
+/* ОСТАЛЬНЫЕ СТИЛИ (Header, Menu, Hero, About, Director, Contacts, Footer) */
 /* ========================================== */
 
-/* Reset */
+/* Reset & base */
 * {
     margin: 0;
     padding: 0;
@@ -327,7 +441,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header styles */
+/* Header */
 .header {
     background: #fff;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -424,7 +538,7 @@ body {
     display: none;
 }
 
-/* Tablet menu (768-1024px) */
+/* Tablet menu */
 @media (max-width: 1024px) and (min-width: 768px) {
     .container {
         padding: 0 15px;
@@ -533,7 +647,7 @@ body {
     }
 }
 
-/* Mobile menu (max 767px) */
+/* Mobile menu */
 @media (max-width: 767px) {
     .container {
         padding: 0 10px;

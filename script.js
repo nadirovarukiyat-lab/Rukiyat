@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== 1. МОБИЛЬНОЕ МЕНЮ (Гамбургер) =====
+    // ===== 1. МОБИЛЬНОЕ МЕНЮ =====
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.menu');
     
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     [hero, about, specialists, services, director, contactsSection].forEach(section => {
         section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
+        section.style.transform = translateY(20px);
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
