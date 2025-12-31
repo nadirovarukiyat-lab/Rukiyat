@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://img.космет.jng">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios-filled/50/medical-doctor.png">
 </head>
 <body>
     <!-- Шапка -->
@@ -56,7 +56,10 @@
             <h2 class="section-title">Обо мне</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image/космет.jpg"></div>
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                        <p>Фото специалиста</p>
+                    </div>
                 </div>
                 <div class="about-text">
                     <h3>Меня зовут Айша</h3>
@@ -113,14 +116,14 @@
             <h2 class="section-title">Услуги</h2>
             <p class="section-subtitle">Все процедуры выполняются с соблюдением высочайших стандартов стерильности и безопасности</p>
             
-            <div class="services-categories">
+            <div class="services-grid">
                 <!-- Процедуры для лица -->
-                <div class="category">
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-spa"></i>
                         Процедуры для лица
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Механическая чистка лица</span>
                             <span class="service-price">1 200 ₽</span>
@@ -169,12 +172,12 @@
                 </div>
 
                 <!-- Хиджама -->
-                <div class="category">
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-hand-holding-medical"></i>
                         Хиджама
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Оздоровительная хиджама всего тела</span>
                             <span class="service-price">1 500 ₽</span>
@@ -194,13 +197,13 @@
                     </div>
                 </div>
 
-                <!-- Брови и эпиляция -->
-                <div class="category">
+                <!-- Брови -->
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-eye"></i>
                         Коррекция бровей
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Исламская коррекция бровей</span>
                             <span class="service-price">700 ₽</span>
@@ -218,12 +221,15 @@
                             <span class="service-price">800 ₽</span>
                         </div>
                     </div>
+                </div>
 
+                <!-- Удаление волос с лица -->
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-wind"></i>
                         Удаление волос с лица
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Баки</span>
                             <span class="service-price">200 ₽</span>
@@ -244,12 +250,12 @@
                 </div>
 
                 <!-- Массаж -->
-                <div class="category">
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-hands"></i>
                         Массаж
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Массаж лица</span>
                             <span class="service-price">400 ₽</span>
@@ -278,12 +284,12 @@
                 </div>
 
                 <!-- Нейл-мастер -->
-                <div class="category">
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-paint-brush"></i>
                         Нейл-мастер
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Маникюр</span>
                             <span class="service-price">500 ₽</span>
@@ -301,13 +307,15 @@
                             <span class="service-price">300 ₽</span>
                         </div>
                     </div>
-               </div>
+                </div>
 
-                <!-- "Эпиляция тела" --> 
+                <!-- Эпиляция тела -->
+                <div class="service-category">
                     <h3 class="category-title">
                         <i class="fas fa-leaf"></i>
+                        Эпиляция тела
                     </h3>
-                    <div class="service-items">
+                    <div class="service-list">
                         <div class="service-item">
                             <span class="service-name">Подмышечные впадины</span>
                             <span class="service-price">200 ₽</span>
@@ -350,16 +358,22 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="gallery-image clinic-1"></div>
-                    <p class="gallery-caption">Основная процедурная</p>
+                    <div class="gallery-image">
+                        <i class="fas fa-clinic-medical"></i>
+                        <p>Основная процедурная</p>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-image clinic-2"></div>
-                    <p class="gallery-caption">Зона отдыха</p>
+                    <div class="gallery-image">
+                        <i class="fas fa-couch"></i>
+                        <p>Зона отдыха</p>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-image clinic-3"></div>
-                    <p class="gallery-caption">Рабочее пространство</p>
+                    <div class="gallery-image">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <p>Рабочее пространство</p>
+                    </div>
                 </div>
             </div>
         </div>
